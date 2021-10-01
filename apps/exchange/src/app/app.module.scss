@@ -1,13 +1,15 @@
 .container {
   display: grid;
-  grid-template-areas:
-    'chart chart chart chart orderboook'
-    'chart chart chart chart orderboook'
-    'chart chart chart chart orderboook'
-    'panel panel panel order order'
-    'panel panel panel order order';
+  grid-template-rows: 3rem calc(100vh - 3rem);
+}
 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: .5rem;
+.exchangeContainer {
+  display: grid;
+  grid-template-areas:
+    'chart chart   orderboook trades'
+    'panel panel   order      order';
+
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: auto 16.5rem;
+  grid-gap: 0.5rem;
 }

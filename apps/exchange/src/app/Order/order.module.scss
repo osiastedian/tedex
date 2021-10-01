@@ -1,3 +1,16 @@
 .container {
   grid-area: order;
 }
+
+.orderInput {
+  label {
+    top: 0.5rem;
+    left: 1rem;
+    width: 5rem;
+  }
+  span {
+    top: 0.5rem;
+    right: 1rem;
+    width: 4rem;
+  }
+}

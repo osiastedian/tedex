@@ -1,7 +1,7 @@
 import { ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/solid';
 import styles from './OrderBook.module.scss';
 const OrderBook = () => {
-  const sellOrders = Array(8).fill({
+  const sellOrders = Array(9).fill({
     price: 433566.87,
     amount: 1.321123,
     total: 453566.12,
@@ -12,14 +12,14 @@ const OrderBook = () => {
       <table className="w-full text-right border-t text-sm">
         <thead>
           <tr className="border-b">
-            <th className="font-normal">Price(USDT)</th>
-            <th className="font-normal">Amount(BTC)</th>
+            <th className="font-normal">Price(TRX)</th>
+            <th className="font-normal">Amount(ICX)</th>
             <th className="font-normal pr-2">Total</th>
           </tr>
         </thead>
         <tbody>
           {sellOrders.map((order, i) => (
-            <tr key={i}>
+            <tr key={i} className="hover:bg-red-100  cursor-pointer">
               <td className="text-red-600">{order.price}</td>
               <td>{order.amount}</td>
               <td className="pr-2">{order.total}</td>
@@ -39,7 +39,7 @@ const OrderBook = () => {
             </td>
           </tr>
           {sellOrders.map((order, i) => (
-            <tr key={i}>
+            <tr key={i} className="hover:bg-green-100 cursor-pointer">
               <td className="text-green-600">{order.price}</td>
               <td>{order.amount}</td>
               <td className="pr-2">{order.total}</td>
