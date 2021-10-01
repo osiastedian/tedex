@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    'chart chart chart chart orderboook'
+    'chart chart chart chart orderboook'
+    'chart chart chart chart orderboook'
+    'panel panel panel order order'
+    'panel panel panel order order';
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: .5rem;
+}
